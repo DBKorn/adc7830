@@ -1,7 +1,7 @@
 #include "adcDevice.h"
 
 int fd;
-int cmd = 0x84;
+int cmd = 0x84; //Single ended inputs
 
 int init(int addr){
     wiringPiSetup();
