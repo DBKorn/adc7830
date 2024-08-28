@@ -3,7 +3,7 @@
 int fd;
 int cmd = 0x84; //Single ended inputs
 
-int init(int addr){
+int adc7830Init(int addr){
     wiringPiSetup();
     
     fd = wiringPiI2CSetup(addr);   
