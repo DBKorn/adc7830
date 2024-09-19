@@ -3,7 +3,7 @@
 int fd;
 int cmd = 0x84; //Single ended inputs
 
-int adc7830Init(int addr){
+int ads7830Init(int addr){
     wiringPiSetup();
     
     fd = wiringPiI2CSetup(addr);   
@@ -23,7 +23,7 @@ int adc7830Init(int addr){
     }
 }
 
-int analogRead(int chn){
+int ads7830AnalogRead(int chn){
     wiringPiI2CWrite(fd, cmd|(((chn<<2 | chn>>1)&0x07)<<4));
     return wiringPiI2CRead(fd);
 }
