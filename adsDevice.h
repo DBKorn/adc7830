@@ -2,4 +2,4 @@
 #include <wiringPiI2C.h>
 #include <stdio.h>
 
-extern int analogRead(int chn);
+extern int ads7830AnalogRead(int chn);
